@@ -12,6 +12,34 @@
       
         <input type="submit" value="Login">
       </form>
+
+      <!DOCTYPE HTML>
+      <html>
+         <body>
+            <center>
+               <input type="password" placeholder="passcode" id="tutorial">
+               <button onclick="protectpasscode()">CHECK</button>
+               <script>
+                  function protectpasscode() {
+                     const result = document.getElementById("tutorial").value;
+                     let passcode = 12345;
+                     let space = '';
+                     if (result == space) {
+                        alert("Type passcode")
+                     } else {
+                        if (result == passcode) {
+                           document.write("<center><h1>TP, The Best E-Learning </h1></center>");
+                        } else {
+                           alert("Incorrect Passcode");
+                           location.reload();
+                        }
+                     }
+                  }
+               </script>
+            </center>
+         </body>
+      </html>
+
     <p><h2>Daily</h2></p>
     <p><a href="https://KeyvanTahmasbi.github.io/Trade/Trade/Forex_Reports/D_20231123.htm">2023.11.08</a></p>
 
