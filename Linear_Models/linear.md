@@ -181,12 +181,13 @@ f(p)
 
 $$\textbf{Y} \sim N(\mu, \Sigma)$$
 
+```math
 $$
 \textbf{Y} = \begin{pmatrix} Y_1 \\ Y_2 \end{pmatrix} , 
 \mu = \begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix} ,
 \Sigma= \begin{pmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{pmatrix}
 $$
-
+```
 اگر $_{11}\Sigma$ ناتکین باشد داریم:
 
 
