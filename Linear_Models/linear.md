@@ -76,39 +76,42 @@ cbind(y, x1, x2)
 #
 ### توزیع نرمال چند متغیره
 
-$$\textbf{X}=(X_1,...,X_n)^T$$
+$$\textbf{X}=(X_1,...,X_p)^T$$
 
-$$\textbf{X} \sim N(\mu , \Sigma) $$
+$$\textbf{X} \sim N_p(\mu , \Sigma) $$
 
-$$\mu = (\mu_1, ... , \mu_n)^T$$
+$$\mu = (\mu_1, ... , \mu_p)^T$$
 
 $$\Sigma_{i,j} = E[(X_i - E(X_i))(X_j-E(X_j))]=Cov[X_i, X_j] $$
+
+$$f(\textbf{X})=f(x_1,...,x_p) = (2\pi)^{-\frac{n}{2}} \Sigma^{-{\frac{1}{2}}} exp[-\frac{1}{2}(x-\mu)^T \Sigma^{-1}(x-\mu)] $$
+
+همیشه $\Sigma$ مثبت است.
+
+اگر $0 = |\Sigma|$، توزیع $\textbf{X} $  نرمال تکین (sigular) است.
 
 # 
 ### شبیه سازی توزیع نرمال دو متغیره
 
 میخواهیم تابع چگالی توزیع نرمال دو متغیره را بدست آوریم.
 
-با توجه به تابع چگالی توزیع نرمال چند متغیره:
-
-$$f(x_1,...,x_n) = (2\pi)^{-\frac{n}{2}} \Sigma^{-{\frac{1}{2}}} exp[-\frac{1}{2}(x-\mu)^T \Sigma^{-1}(x-\mu)] $$
-
-داریم:
-$$
-\textbf{y} = \begin{pmatrix} x \\ y \end{pmatrix}
+$
+\textbf{X} = \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}
 ,
-\mu = \begin{pmatrix} \mu_x \\ \mu_y \end{pmatrix}
+\mu = \begin{pmatrix} \mu_{x_1} \\ \mu_{x_2} \end{pmatrix}
 ,
-\Sigma =  \begin{pmatrix} \sigma^2_x & \sigma^2_{xy} \\ \sigma^2_{xy} & \sigma^2_y \end{pmatrix}
-$$
+\Sigma =  \begin{pmatrix} \sigma^2_{x_1} & \sigma_{x_1 x_2} \\ \sigma_{x_1 x_2} & \sigma^2_{x_2}  \end{pmatrix} = \begin{pmatrix} \sigma^2_{x_1} & \rho \sigma_{x_1} \sigma_{x_2} \\ \sigma_{x_1} \sigma_{x_2} & \sigma^2_{x_2}  \end{pmatrix}
+$
+
+همبستگی بین x, y:
+
+$\rho = \frac{\sigma_{x_1 x_2}}{\sigma_{x_1} \sigma_{x_2}}$
 
 پارامترهای توزیع کناری:
 
 $E(x) = \mu_x$ , $E(y)=\mu_y$ , $var(x)=\sigma_x^2$ , $var(y) = \sigma_y^2$
 
-همبستگی بین x, y:
 
-$\rho = \frac{\sigma_{xy}}{\sigma_x \sigma_y}$
 
 داریم:
 
@@ -123,6 +126,8 @@ $(\textbf{y}-\mu)^T |\Sigma|^{-1}(\textbf{y}-\mu) = \frac{1}{1-\rho^2}[(\frac{x-
 بنابراین تابع چگالی نرمال دو متغیره برابر است با:
 
 $f(x,y) = \frac{1}{2 \pi \sigma_x \sigma_y \sqrt{1-\rho^2}}exp[-\frac{1}{2(1-\rho^2)} \{(\frac{x-\mu_x}{\sigma_x})^2\} + \{(\frac{y-\mu_y}{\sigma_y})^2 -2 \rho (\frac{x-\mu_x}{\sigma_x})(\frac{y-\mu_y}{\sigma_y}) \} ] $
+
+استقلال، $0 = \rho$ را نتیجه می دهد ولی عکس آن صادق نیست. یعنی اگر $0 = \rho$ الزاما متغیرها از هم مستقل نیستند بجز در توزیع نرمال دو متغیره.
 
 # 
 ## توزیع شرطی نرمال دو متغیره

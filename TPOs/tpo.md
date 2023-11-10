@@ -64,6 +64,7 @@ engage: (v) مشغول کردن
 - parents and children increasingly engage in discussions of past events when children are about three years old.
 
 # TPO 07
+
 ## The Geologic History of the Mediterranean
 
 beneath: (adv) در زیر
@@ -104,4 +105,140 @@ Turbulent: آشفته-سرکش-یاغی
 
 cohesiveness - cohision: (n) انسجام
 
-pecu
+peculiarly: بطور خاص
+
+monolitic: یک پارچه
+
+entity: وجود - موجودیت
+
+garrison: پادگان
+
+utterly: کاملا
+
+obsession: وسواس
+
+lain: دراز کشیده
+
+conquest: فتح
+
+stark: شدید
+
+undeniable: غیرقابل انکار
+
+marching: راهپیمایی
+
+imperative: امری ضروری
+
+exploitation: بهره برداری
+
+engender: ایجاد کند
+
+foster: پرورش دادن
+
+virtue: تقوا - پاکدامنی
+
+devotion: تعلق خاطر - سر سپردگی
+
+predespose: مستعد کردن
+
+subtlety: ظرافت
+
+imitator: مقلد
+
+imitation: تقلید
+
+intellectual: فکری - پر فکر 
+
+novelty: تازگی - نو ظهوری
+
+disdain: تحقیر
+
+epistile: رساله
+
+debt: بدهی
+
+consciously: آگاهانه
+
+speculative: نظری
+
+speculate: اندیشیدن
+
+sphere: کُره
+
+tension: تنش
+
+## Agriculture, Iron, and the Bantu Peoples
+
+bond: رابطه - رشته
+
+conduct: هدایت
+
+enforce: اجرا کردن
+
+emphasis: تاکید کردن
+
+might: ممکن - قدرت
+
+mere: صرف - محض
+
+merely: صرفا - فقط
+
+millet: ارزن
+
+surghum: ذرت خوشه ای
+
+diffuse: پراکنده - منتشر شده
+
+defuse: خنثی کردن
+
+receptiveness: پذیرا بودن
+
+chariot: ارابه
+
+traverse: پس و پیش رفتن
+
+cavarly: سواره نظام
+
+carve: تراشیدن
+
+innovation: نوآوری
+
+thrive: رشد کردن
+
+copper: مس
+
+metallurgy: فلزکاری
+
+blacksmith: آهنگر
+
+desication: خشک کردن
+
+implement: پیاده سازی - اجرا کردن
+
+demographic: جمعیت شناختی
+
+# TPO 08
+
+# TPO 09
+
+craft: مهارت - صنعت
+- The first water craft theory about the migration was that around 11,000-12,000 years ago
+
+crumble: (v) فرو ریختن
+- But belief in this ice-free corridor began to crumble when paleoecologist Glen MacDonald demonstrated that some of the most important radiocarbon dates used to support the existence of an icefree corridor were incorrect.
+
+ shelf: طاقچه
+ - continental shelf فلات قاره
+
+proponent: طرفدار
+
+- coastal: ساحلی
+- The most influential proponent of the coastal migration route has been Canadian archaeologist Knut Fladmark.
+
+inhospitable: غیر مهمان پذیر
+- This is the time period in which most scientists formerly believed the area to be inhospitable for humans.
+
+impetus: انگیزه - عزم
+- there may have been a greater impetus for people to move in a southerly direction.
+
+## Reflection in Teaching
