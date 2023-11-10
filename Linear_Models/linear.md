@@ -92,17 +92,19 @@ $$f(\textbf{X})=f(x_1,...,x_p) = (2\pi)^{-\frac{n}{2}} \Sigma^{-{\frac{1}{2}}} e
 
 زمانی که $\sigma^2 \textbf{I}=|\Sigma|$ تابع مشخصه $N_p(\mu , \Sigma) \sim \textbf{X}$ به تابع مشخصه های توزیع نرمال یک متغیره مولفه های $\textbf{X}$ تبدیل می شود. در نتیجه در این رابطه مولفه های $\textbf{X}$ متغیرهای نرمال مستقل از هم هستند. پس تابع چگالی توام نرمال چند متغیره می شود ضرب چگالی های کناری تک تک آنها. یعنی
 
-```math
+
 $$
 f(\textbf{X}) = \prod_{i=1}^p f(x_1,...,x_p) = \prod_{i=1}^p (2 \pi \sigma^2)^{-\frac{1}{2}} exp[-\frac{{(x_i - \mu_i)^2}}{2\sigma^2}] = (2 \pi \sigma^2)^{-\frac{p}{2}} exp[-\frac{1}{2 \sigma^2}(\textbf{X}-\mu)^T \Sigma^{-1}(\textbf{X}-\mu)]
 $$
-```
+
+
 
 # 
 ### شبیه سازی توزیع نرمال دو متغیره
 
 میخواهیم تابع چگالی توزیع نرمال دو متغیره را با توجه به فرمول بالا بدست آوریم. 
 
+```math
 $$
 \textbf{X} = \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}
 ,
@@ -110,7 +112,7 @@ $$
 ,
 \Sigma =  \begin{pmatrix} \sigma^2_{x_1} & \sigma_{x_1 x_2} \\ \sigma_{x_1 x_2} & \sigma^2_{x_2}  \end{pmatrix} = \begin{pmatrix} \sigma^2_{x_1} & \rho \sigma_{x_1} \sigma_{x_2} \\ \sigma_{x_1} \sigma_{x_2} & \sigma^2_{x_2}  \end{pmatrix}
 $$
-
+```
 همبستگی بین x, y:
 
 $\rho = \frac{\sigma_{x_1 x_2}}{\sigma_{x_1} \sigma_{x_2}}$
