@@ -98,13 +98,13 @@ $$f(\textbf{X})=f(x_1,...,x_p) = (2\pi)^{-\frac{n}{2}} \Sigma^{-{\frac{1}{2}}} e
 
 میخواهیم تابع چگالی توزیع نرمال دو متغیره را بدست آوریم. 
 
-$
+$$
 \textbf{X} = \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}
 ,
 \mu = \begin{pmatrix} \mu_{x_1} \\ \mu_{x_2} \end{pmatrix}
 ,
 \Sigma =  \begin{pmatrix} \sigma^2_{x_1} & \sigma_{x_1 x_2} \\ \sigma_{x_1 x_2} & \sigma^2_{x_2}  \end{pmatrix} = \begin{pmatrix} \sigma^2_{x_1} & \rho \sigma_{x_1} \sigma_{x_2} \\ \sigma_{x_1} \sigma_{x_2} & \sigma^2_{x_2}  \end{pmatrix}
-$
+$$
 
 همبستگی بین x, y:
 
@@ -120,7 +120,8 @@ $E(x) = \mu_x$ , $E(y)=\mu_y$ , $var(x)=\sigma_x^2$ , $var(y) = \sigma_y^2$
 
 $$|\Sigma|= E(x-E(x)) =\sigma_x^2 \sigma_y^2 - \sigma^2_{xy} =\sigma_x^2\sigma_y^2(1- \frac{\sigma_{xy}^2}{\sigma_x^2 \sigma_y^2}) =  \sigma_x^2\sigma_y^2(1-\rho^2)$$
 
-$\Sigma^{-1} = \frac{1}{|\Sigma|} \begin{pmatrix} \sigma^2_y & -\sigma_{xy} \\ -\sigma_{xy} & \sigma^2_x\end{pmatrix} = \frac{1}{1- \rho^2} \begin{pmatrix} \frac{1}{\sigma^2_x} & -\frac{\rho}{\sigma_x \sigma_y} \\ -\frac{\rho}{\sigma_x \sigma_y} & \frac{1}{\sigma^2_y}\end{pmatrix} $
+$$\Sigma^{-1} = \frac{1}{|\Sigma|} \begin{pmatrix} \sigma^2_y & -\sigma_{xy} \\ -\sigma_{xy} & \sigma^2_x\end{pmatrix} = \frac{1}{1- \rho^2} \begin{pmatrix} \frac{1}{\sigma^2_x} & -\frac{\rho}{\sigma_x \sigma_y} \\ -\frac{\rho}{\sigma_x \sigma_y} & \frac{1}{\sigma^2_y}\end{pmatrix} 
+$$
 
 در نتیجه:
 
