@@ -98,7 +98,6 @@ f(\textbf{X}) = \prod_{i=1}^p f(x_1,...,x_p) = \prod_{i=1}^p (2 \pi \sigma^2)^{-
 $$
 
 
-
 # 
 ### شبیه سازی توزیع نرمال دو متغیره
 
@@ -106,30 +105,31 @@ $$
 
 ```math
 $$
-\textbf{X} = \begin{pmatrix} X_1 \\ X_2 \end{pmatrix}
+\textbf{X} = \begin{pmatrix} X \\ Y \end{pmatrix}
 ,
-\mu = \begin{pmatrix} \mu_{x_1} \\ \mu_{x_2} \end{pmatrix}
+\mu = \begin{pmatrix} \mu_{x} \\ \mu_{y} \end{pmatrix}
 ,
-\Sigma =  \begin{pmatrix} \sigma^2_{x_1} & \sigma_{x_1 x_2} \\ \sigma_{x_1 x_2} & \sigma^2_{x_2}  \end{pmatrix} = \begin{pmatrix} \sigma^2_{x_1} & \rho \sigma_{x_1} \sigma_{x_2} \\ \sigma_{x_1} \sigma_{x_2} & \sigma^2_{x_2}  \end{pmatrix}
+\Sigma =  \begin{pmatrix} \sigma^2_{x} & \sigma_{x y} \\ \sigma_{x y} & \sigma^2_{y}  \end{pmatrix} = \begin{pmatrix} \sigma^2_{x} & \rho \sigma_{x} \sigma_{y} \\ \sigma_{x} \sigma_{y} & \sigma^2_{y}  \end{pmatrix}
 $$
 ```
 همبستگی بین x, y:
 
-$\rho = \frac{\sigma_{x_1 x_2}}{\sigma_{x_1} \sigma_{x_2}}$
+$\rho = \frac{\sigma_{xy}}{\sigma_{x} \sigma_{y}}$
 
 پارامترهای توزیع کناری:
 
-$E(x) = \mu_x$ , $E(y)=\mu_y$ , $var(x)=\sigma_x^2$ , $var(y) = \sigma_y^2$
+$E(x) = \mu_{x}$ , $E(y)=\mu_{y}$ , $var(x)=\sigma_{x}^2$ , $var(y) = \sigma_{y}^2$
 
 
 
 داریم:
 
-$$|\Sigma|= E(x-E(x)) =\sigma_x^2 \sigma_y^2 - \sigma^2_{xy} =\sigma_x^2\sigma_y^2(1- \frac{\sigma_{xy}^2}{\sigma_x^2 \sigma_y^2}) =  \sigma_x^2\sigma_y^2(1-\rho^2)$$
+$$|\Sigma| =\sigma_x^2 \sigma_y^2 - \sigma^2_{xy} =\sigma_x^2\sigma_y^2(1- \frac{\sigma_{xy}^2}{\sigma_x^2 \sigma_y^2}) =  \sigma_x^2\sigma_y^2(1-\rho^2)$$
 
+```math
 $$\Sigma^{-1} = \frac{1}{|\Sigma|} \begin{pmatrix} \sigma^2_y & -\sigma_{xy} \\ -\sigma_{xy} & \sigma^2_x\end{pmatrix} = \frac{1}{1- \rho^2} \begin{pmatrix} \frac{1}{\sigma^2_x} & -\frac{\rho}{\sigma_x \sigma_y} \\ -\frac{\rho}{\sigma_x \sigma_y} & \frac{1}{\sigma^2_y}\end{pmatrix} 
 $$
-
+```
 در نتیجه:
 
 $$
@@ -170,9 +170,26 @@ f(p)
 ```
 ابتدا از توزیع بردار متغیر مستقل داده تولید می کنیم. به همین دلیل از شبیه سازی استفاده میکنیم. برای برآورد پارامترهای مدل نیاز است که تابع درستنمایی را بدست آوریم و از آن لگاریتم بگیریم. سپس برای اینکه MLE یا برآورد بزرگترین درستنمایی را بدست آوریم logL- را محاسبه میکنیم و در آخر برآورد پارامترها را که جلوتر به آن میپردازیم را بدست می آوریم. (در حالت محاسبه دستی پس از اینکه تابع درستمنایی را بدست آوردیم، از آن نسبت به پارامترهای مدل مشتق میگرفتیم و برابر با صفر قرار میدادیم. مشتق گیری حکم بدست آوردن بیشترین مقدار بود. سپس برآورد پارامترها بدست می آمد.)
 
+#### مثال: توزیع نرمال سه متغیره؟؟؟
+
+
 
 # 
 ## توزیع شرطی نرمال دو متغیره
+
+داریم:
+
+$$\textbf{Y} \sim N(\mu, \Sigma)$$
+
+$$
+\textbf{Y} = \begin{pmatrix} Y_1 \\ Y_2 \end{pmatrix} , 
+\mu = \begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix} ,
+\Sigma= \begin{pmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{pmatrix}
+$$
+
+اگر $_{11}\Sigma$ ناتکین باشد داریم:
+
+
 ### مثال
 فرض کنید ماتریس پراکندگی متغیرها $_1y$ , $_2y$, $_3y$ به صورت زیر است:
 
