@@ -125,11 +125,14 @@ $$
 
 در نتیجه:
 
-$(\textbf{y}-\mu)^T |\Sigma|^{-1}(\textbf{y}-\mu) = \frac{1}{1-\rho^2}[(\frac{x-\mu_x}{\sigma_x})^2+(\frac{y-\mu_y}{\sigma_y})^2 -2\rho (\frac{x-\mu_x}{\sigma_x})(\frac{y-\mu_y}{\sigma_y})] $
+$$
+(\textbf{y}-\mu)^T |\Sigma|^{-1}(\textbf{y}-\mu) = \frac{1}{1-\rho^2}[(\frac{x-\mu_x}{\sigma_x})^2+(\frac{y-\mu_y}{\sigma_y})^2 -2\rho (\frac{x-\mu_x}{\sigma_x})(\frac{y-\mu_y}{\sigma_y})] 
+$$
 
 بنابراین تابع چگالی نرمال دو متغیره برابر است با:
 
-$f(x,y) = \frac{1}{2 \pi \sigma_x \sigma_y \sqrt{1-\rho^2}}exp[-\frac{1}{2(1-\rho^2)} \{(\frac{x-\mu_x}{\sigma_x})^2\} + \{(\frac{y-\mu_y}{\sigma_y})^2 -2 \rho (\frac{x-\mu_x}{\sigma_x})(\frac{y-\mu_y}{\sigma_y}) \} ] $
+$$f(x,y) = \frac{1}{2 \pi \sigma_x \sigma_y \sqrt{1-\rho^2}}exp[-\frac{1}{2(1-\rho^2)} \{(\frac{x-\mu_x}{\sigma_x})^2\} + \{(\frac{y-\mu_y}{\sigma_y})^2 -2 \rho (\frac{x-\mu_x}{\sigma_x})(\frac{y-\mu_y}{\sigma_y}) \} ]
+$$
 
 استقلال، $0 = \rho$ را نتیجه می دهد ولی عکس آن صادق نیست. یعنی اگر $0 = \rho$ الزاما متغیرها از هم مستقل نیستند بجز در توزیع نرمال دو متغیره.
 
