@@ -76,13 +76,18 @@ cbind(y, x1, x2)
 #
 ### توزیع نرمال چند متغیره
 
-$$\textbf{X}=(X_1,...,X_p)^T$$
+$$\textbf{X}=(X_1,\dots,X_p)^T$$
 
-$$\textbf{X} \sim N_p(\mu , \Sigma) $$
+$$\textbf{X} \sim N_p(\underline{\mu} , \underline{\Sigma}) $$
 
 $$\mu = (\mu_1, ... , \mu_p)^T$$
 
-$$\Sigma_{i,j} = E[(X_i - E(X_i))(X_j-E(X_j))]=Cov[X_i, X_j] $$
+```math
+$$
+\underline{\Sigma} =\Sigma_{i,j} =D(\textbf{X})= E[(X_i - E(X_i))(X_j-E(X_j))]=Cov[X_i, X_j] = \begin{pmatrix} \sigma_1^2 & \sigma_{12} & \dots & \sigma_{1p} \\ 
+\sigma_{12} & \sigma_2^2 & \dots & \sigma_{2p} \\ \vdots & \vdots & \ddots & \vdots \\ \sigma_{p1} & \sigma_{p2} & \dots & \sigma_p^2 \end{pmatrix}
+$$
+```
 
 $$f(\textbf{X})=f(x_1,...,x_p) = (2\pi)^{-\frac{n}{2}} \Sigma^{-{\frac{1}{2}}} exp[-\frac{1}{2}(x-\mu)^T \Sigma^{-1}(x-\mu)] $$
 
@@ -105,7 +110,7 @@ $$
 
 ```math
 $$
-\textbf{X} = \begin{pmatrix} X \\ Y \end{pmatrix}
+\textbf{X} = \begin{pmatrix} x \\ y \end{pmatrix}
 ,
 \mu = \begin{pmatrix} \mu_{x} \\ \mu_{y} \end{pmatrix}
 ,
@@ -124,10 +129,13 @@ $E(x) = \mu_{x}$ , $E(y)=\mu_{y}$ , $var(x)=\sigma_{x}^2$ , $var(y) = \sigma_{y}
 
 داریم:
 
-$$|\Sigma| =\sigma_x^2 \sigma_y^2 - \sigma^2_{xy} =\sigma_x^2\sigma_y^2(1- \frac{\sigma_{xy}^2}{\sigma_x^2 \sigma_y^2}) =  \sigma_x^2\sigma_y^2(1-\rho^2)$$
+$$
+|\Sigma| =\sigma_x^2 \sigma_y^2 - \sigma^2_{xy} =\sigma_x^2\sigma_y^2(1- \frac{\sigma_{xy}^2}{\sigma_x^2 \sigma_y^2}) =  \sigma_x^2\sigma_y^2(1-\rho^2)
+$$
 
 ```math
-$$\Sigma^{-1} = \frac{1}{|\Sigma|} \begin{pmatrix} \sigma^2_y & -\sigma_{xy} \\ -\sigma_{xy} & \sigma^2_x\end{pmatrix} = \frac{1}{1- \rho^2} \begin{pmatrix} \frac{1}{\sigma^2_x} & -\frac{\rho}{\sigma_x \sigma_y} \\ -\frac{\rho}{\sigma_x \sigma_y} & \frac{1}{\sigma^2_y}\end{pmatrix} 
+$$
+\Sigma^{-1} = \frac{1}{|\Sigma|} \begin{pmatrix} \sigma^2_y & -\sigma_{xy} \\ -\sigma_{xy} & \sigma^2_x\end{pmatrix} = \frac{1}{1- \rho^2} \begin{pmatrix} \frac{1}{\sigma^2_x} & -\frac{\rho}{\sigma_x \sigma_y} \\ -\frac{\rho}{\sigma_x \sigma_y} & \frac{1}{\sigma^2_y}\end{pmatrix} 
 $$
 ```
 در نتیجه:
@@ -175,7 +183,7 @@ f(p)
 
 
 # 
-## توزیع شرطی نرمال دو متغیره
+## توزیع نرمال شرطی
 
 داریم:
 
@@ -183,14 +191,90 @@ $$\textbf{Y} \sim N(\mu, \Sigma)$$
 
 ```math
 $$
-\textbf{Y} = \begin{pmatrix} Y_1 \\ Y_2 \end{pmatrix} , 
+\textbf{Y} = \begin{pmatrix} y_1 \\ y_2 \end{pmatrix} , 
 \mu = \begin{pmatrix} \mu_1 \\ \mu_2 \end{pmatrix} ,
 \Sigma= \begin{pmatrix} \Sigma_{11} & \Sigma_{12} \\ \Sigma_{21} & \Sigma_{22} \end{pmatrix}
 $$
 ```
 اگر $_{11}\Sigma$ ناتکین باشد داریم:
 
+$$
+E[y_2|y_1] = \mu_2+ \Sigma_{21} \Sigma_{11}^{-1}(y_1 - \mu_1)
+$$
 
+$$
+D(y_2|y_1) = Var(y_2|y_1) =\Sigma_{22} - \Sigma_{21} \Sigma_{11}^{-1}\Sigma_{12}
+$$
+
+پس توزیع شرطی می شود:
+
+$$
+y_2|y_1 \sim N(\mu_2+ \Sigma_{21} \Sigma_{11}^{-1}(y_1 - \mu_1), \Sigma_{22} - \Sigma_{21} \Sigma_{11}^{-1}\Sigma_{12})
+$$
+
+### مثال: توزیع نرمال شرطی دو متغیره
+
+برای توزیع نرمال شرطی دو متغیره داریم:
+
+$$
+E(y|x) = \mu_y + \frac{\sigma_{yx}}{\sigma_x^2}(x-\mu_x) = \mu_y + \rho \frac{\sigma_y}{\sigma_x}(x-\mu_x)
+$$
+
+$$
+Var(y|x) = \sigma_y^2 - \sigma_{yx} \frac{1}{\sigma_x^2} \sigma_{xy} = \sigma_y^2 - \frac{\sigma_{xy}^2}{\sigma_x^2} =\sigma_y^2(1-\rho^2)
+$$
+
+داریم:
+
+$$
+Var(y|x) < Var(y) \Rightarrow (1-\rho^2)\sigma ^2_y < \sigma_y^2
+$$
+
+حالت تساوی زمانی برقرار است که $0=\rho$. در این حالت میانگین شرطی نیز با میانگین غیر شرطی برابر است.
+
+```R
+# Conditional bivariate normal distribution page 33 - example 2.3
+library(MASS)
+
+n = 100
+mu = c(0,0)
+S = matrix(c(10,0.5,0.5,1),2,2)
+y = mvrnorm(n , mu, S) #library(MASS)
+y2 = y[,2]
+mu1 = mu2 = 0
+S1 = S2 = 1
+rho = 0.5
+
+mu1gmu2 = mu1 + rho*S1/S2*(y2 - mu2)
+S1gS2 = (S1)^2*(1-rho^2)
+y1gy2 = rnorm(n, mu1gmu2, S1gS2)
+y1gy2
+
+hist(y1gy2)
+heatmap(y)
+```
+### مثال:
+فرض کنید توزیع شرطی **متغیر تصادفی y** به شرط **بردار تصادفی X** تولید شده از توزیع توام آنها، نرمال باشد.
+
+```math
+$$
+Y = \begin{pmatrix} \underline{X} \\ y \end{pmatrix}
+$$
+```
+میخواهیم توزیع $y|X$ را تولید کنیم.
+
+داریم:
+
+$$
+y|X \sim MN(E(y|X), Var(y|X))
+$$
+
+بطوری که:
+$$
+E(y|X) = \mu_y + 
+$$
+
+#
 ### مثال
 فرض کنید ماتریس پراکندگی متغیرها $_1y$ , $_2y$, $_3y$ به صورت زیر است:
 
@@ -325,3 +409,22 @@ Results = cbind(p, MLE, se)
 اگر -log(L) کم شود یعنی مدل خوب است.
 
 معیار AIC=-2log(L) - 2p هر چه کمتر باشد مدل بهتر است.
+#
+# فصل 4
+ در این فصل آمار استنباطی را انجام می دهیم.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
