@@ -232,6 +232,16 @@ $$
 
 حالت تساوی زمانی برقرار است که $0=\rho$. در این حالت میانگین شرطی نیز با میانگین غیر شرطی برابر است.
 
+### مثال
+
+فرض کنید توزیع زیر را داریم.
+
+```math
+$$
+Y = \begin{pmatrix} y_1 \\ y_2 \end{pmatrix} \sim N_2(\begin{pmatrix} 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 1 & 0.5 \\ 0.5 &1 \end{pmatrix})
+$$
+```
+
 ```R
 # Conditional bivariate normal distribution page 33 - example 2.3
 library(MASS)
@@ -271,7 +281,11 @@ $$
 
 بطوری که:
 $$
-E(y|X) = \mu_y + 
+E(y|X) = \mu_y + \Sigma_{yX} \Sigma_{XX}^{-1} (X-\mu_X) = \mu_y + \sigma'_{Xy} \Sigma_{XX}^{-1}(X-\mu_X)
+$$
+
+$$
+Var(y|X) = \sigma_y^2 - \sigma'_{Xy} \Sigma_{XX}^{-1} \sigma_{Xy}
 $$
 
 #
