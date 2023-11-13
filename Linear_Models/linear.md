@@ -438,7 +438,3 @@ Results = cbind(p, MLE, se)
 
 
 
-
-
-
-
