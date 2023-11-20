@@ -227,6 +227,7 @@ craft: مهارت - صنعت
 
 crumble: (v) فرو ریختن
 - But belief in this ice-free corridor began to crumble when paleoecologist Glen MacDonald demonstrated that some of the most important radiocarbon dates used to support the existence of an icefree corridor were incorrect.
+- Bob's whole belief about her girlfriend was crumble after she left his alone in that situation.
 
  shelf: طاقچه
  - continental shelf فلات قاره
@@ -243,3 +244,32 @@ impetus: انگیزه - عزم
 - there may have been a greater impetus for people to move in a southerly direction.
 
 ## Reflection in Teaching
+
+reflection: (n) بازتاب - تامل
+
+conscious: هوشیار - آگاه
+- Teachers, it is thought, benefit from the practice of reflection, the conscious act of thinking deeply about and carefully examining the interactions and events within their own classrooms.
+
+paucity: کمبود 
+- it enable them to cope with the paucity of scientific fact and the uncertainty of knowledge in the discipline of teaching.
+
+void: خالی - باطل
+- They were concerned that many would be “drawn to these new, refreshing” conceptions of teaching only to find that the void between the abstractions and the realities of teacher reflection is too great to bridge.
+
+utilitarian: (n) سودمند - سودمندگر
+- They describe the initial understanding in the teachers with whom they were working as being “utilitarian…and not rich or detailed enough to drive systematic reflection.” 
+
+facilitate: (v) simplify - comfort تسهیل کردن
+- Wildman and Niles identify three principles that facilitate reflective practice in a teaching situation.
+
+vaguely: بطور مبهم
+
+perceivable: قابل درک
+
+vulnerability: آسیب پذیری
+- Becoming a reflective practitioner requires extra work (Jaworski, 1993) and has only vaguely defined goals with, perhaps, little initially perceivable reward and the threat of vulnerability.
+
+opposed to: مخالف با
+- for example, the value of externally motivated reflection as opposed to that of teachers who might reflect by habit.
+
+exposed to: در معرض
